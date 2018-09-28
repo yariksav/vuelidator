@@ -1,6 +1,6 @@
 # Vuelidator
 
-### This package will hwlp you to validate your datas in vue components
+### This package will help you to validate your datas in vue components
 
 <p align="center">
   <a href="https://www.npmjs.org/package/vuetify-dialog">
@@ -79,7 +79,7 @@ If you need own message options, just override `onValidationMessage` method
 ## Methods
 
 ```js
-  this.validate() \\ starts validation
-  this.validate(rules) \\ starts validation with specific rules
-  this.validate(rules, data) \\ starts validation with specific rules and data
+  this.validate() // starts validation
+  this.validate(rules) // starts validation with specific rules
+  this.validate(rules, data) // starts validation with specific rules and data
 ```

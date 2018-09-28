@@ -17,8 +17,20 @@ function isExists (value) {
 }
 
 const validators = {
+  alpha_numeric: (value, args) => {
+    return validator.isAlphanumeric(value, args[0])
+  },
+  decimal: (value, args) => {
+    const options = args.length ? { locale: args[0] } : undefined
+    return validator.isDecimal(value, options)
+  },
+  integer: (value, args) => {
+    return validator.isInt(value)
+  },
   isExists,
-  required: isExists,
+  length: (value, args) => {
+    return validator.isLength(value, { min: args[0], max: args[1] })
+  },
   min: (value, args) => {
     return validator.isLength(value, { min: args[0], max: undefined })
   },
@@ -31,21 +43,12 @@ const validators = {
   maxval: (value, args) => {
     return validator.isFloat(value, { min: undefined, max: args[0] })
   },
-  length: (value, args) => {
-    return validator.isLength(value, { min: args[0], max: args[1] })
-  },
-  decimal: (value, args) => {
-    const options = args.length ? { locale: args[0] } : undefined
-    return validator.isDecimal(value, options)
-  },
-  integer: (value, args) => {
-    return validator.isInt(value)
-  },
   numeric: (value, args) => {
     return validator.isFloat(value)
   },
-  alpha_numeric: (value, args) => {
-    return validator.isAlphanumeric(value, args[0])
+  required: isExists,
+  phone: (value, args) => {
+    return validator.isMobilePhone(value, args[0])
   }
 }
 

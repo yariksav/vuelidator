@@ -47,15 +47,14 @@ export default {
           if (!rule.message) {
             rule.message = this.onValidationMessage({ field, rule })
           }
-          this.isValidationSuccess = false
+          this.$set(this, 'isValidationSuccess', false)
           this.$set(this.errors, field, rule.message)
           this.$set(this.successes, field, false)
         },
         onSuccess: (field) => {
           this.$set(this.errors, field, undefined)
           this.$set(this.successes, field, true)
-          this.isValidationSuccess = validator.isValid
-          this.successes[field] = true
+          this.$set(this, 'isValidationSuccess', validator.isValid)
         }
       })
       watch && validator.fields.forEach(field => {
