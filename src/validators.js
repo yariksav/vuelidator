@@ -18,11 +18,8 @@ function isExists (value) {
 
 const validators = {
   alpha_numeric: (value, args) => {
-    return validator.isAlphanumeric(value, args[0])
-  },
-  decimal: (value, args) => {
     const options = args.length ? { locale: args[0] } : undefined
-    return validator.isDecimal(value, options)
+    return validator.isAlphanumeric(value, options)
   },
   integer: (value, args) => {
     return validator.isInt(value)
@@ -52,8 +49,9 @@ const validators = {
   }
 }
 
-const validatorItems = ['alpha', 'base64', 'IP', 'boolean',
-  'LatLong', 'UUID', 'PostalCode', 'JWT', 'JSON', 'hash', 'in', 'email', 'MD5', 'MACAddress']
+const validatorItems = ['after', 'alpha', 'base64', 'before', 'boolean', 'IP', 'IPRange', 'boolean', 'creditCard', 'currency',
+  'decimal', 'divisibleBy', 'empty', 'isHexColor', 'hexColor', 'hexadecimal',
+  'LatLong', 'lowercase', 'UUID', 'URL', 'uppercase', 'matches', 'PostalCode', 'port', 'JWT', 'JSON', 'hash', 'in', 'email', 'MD5', 'MACAddress']
 validatorItems.forEach(item => {
   validators[item.toLowerCase()] = (value, args) => {
     const name = 'is' + item.charAt(0).toUpperCase() + item.substr(1, item.length - 1)

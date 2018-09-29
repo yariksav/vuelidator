@@ -1,6 +1,6 @@
 import Validator from './validator'
 import { getMessage } from './messages'
-import { get } from 'lodash'
+import get from 'lodash/get'
 
 export default {
   created () {

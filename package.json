@@ -1,11 +1,18 @@
 {
   "name": "vuelidator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue validator",
-  "main": "src/validator.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:module && npm run build:browser",
+    "build:module": "bili --name vuelidator --format cjs,es --js buble",
+    "build:browser": "bili --name vuelidator --format umd,umd-min --js buble",
+    "prepublish": "npm run build"
   },
+  "main": "dist/vuelidator.cjs.js",
+  "module": "dist/vuelidator.esm.js",
+  "browser": "dist/vuelidator.js",
+  "cdn": "dist/vuelidator.min.js",
+  "unpkg": "dist/vuelidator.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yariksav/vuelidator.git"
@@ -24,7 +31,13 @@
   "homepage": "https://github.com/yariksav/vuelidator#readme",
   "dependencies": {
     "haye": "^2.0.2",
-    "lodash": "^4.17.11",
     "validator": "^10.8.0"
+  },
+  "devDependencies": {
+    "bili": "^3.1.2",
+    "lodash": "^4.17.11"
+  },
+  "peerDependencies": {
+    "lodash": "*"
   }
 }

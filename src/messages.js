@@ -35,3 +35,5 @@ const format = function (message, args) {
 export function getMessage(rule, args) {
   return format(messages[rule], args)
 }
+
+export default messages

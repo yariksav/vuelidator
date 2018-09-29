@@ -1,6 +1,6 @@
 import validators from './validators'
 import haye from 'haye/dist/haye.es'
-import { get } from 'lodash'
+import get from 'lodash/get'
 
 const parseFromString = (rules) => {
   return haye.fromPipe(rules).toArray()
