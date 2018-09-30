@@ -62,29 +62,6 @@ To config your data rules fill validationRules in component computed propetry
 Several validators receives `locale` param, there locales.<br/>
 Locale is one of `['ar', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'el-GR', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', 'en-ZA', 'en-ZM', 'es-ES', 'fr-FR', 'hu-HU', 'it-IT', 'ku-IQ', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sl-SI', 'sk-SK', 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']`) and defaults to `en-US`. 
 
-- `alpha`: 'This field must contain only letters',
-  alpha_numeric: 'This field must contain only letters and numbers',
-  base64: 'Not valid base64 string',
-  decimal: 'Field should be decimal',
-  email: 'E-mail address should be valid',
-  hash: 'Invalid hash',
-  in: 'Not proper value',
-  ip: 'Not valid ip address',
-  json: 'Not valid json token',
-  jwt: 'Not valid jwt token',
-  length: 'Length should be from {0} to {1}',
-  macaddress: 'Invalid MAC accdess',
-  max: 'Length should be less than {0}',
-  maxval: 'Value of field should be less than {0}',
-  min: 'Length should be greater than {0}',
-  minval: 'Value of field should be greater than {0}',
-  md5: 'Invalid MD5 hash',
-  numeric: 'Field should be numeric',
-  postalcode: 'Invalid postal code',
-  phone: 'Phone number should be valid',
-  required: 'This field is required',
-  uuid: 'Invalid uuid'
-
 Validator                   | Description
 --------------------------- | --------------------------------------
 **contains**                | check if the string contains the seed.
