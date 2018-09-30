@@ -22,7 +22,7 @@ npm install vuelidator
 and use in your component
 
 ```js
-import Validatable from 'vuelidator/src/validatable'
+import { Validatable } from 'vuelidator'
 ...
 
 {

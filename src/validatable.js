@@ -57,11 +57,15 @@ export default {
           this.$set(this, 'isValidationSuccess', validator.isValid)
         }
       })
-      watch && validator.fields.forEach(field => {
-        this.$watch(field, (newVal, oldVal) => {
-          validator.validateField(field, newVal)
+      if (watch) {
+        validator.watchers = []
+        validator.fields.forEach(field => {
+          let wather = this.$watch(field, (newVal, oldVal) => {
+            validator.validateField(field, newVal)
+          })
+          validator.watchers.push(wather)
         })
-      })
+      }
       return validator
     },
     validate (rules, data) {
