@@ -1,6 +1,6 @@
 {
   "name": "vuelidator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Vue validator",
   "scripts": {
     "build": "npm run build:module && npm run build:browser",
