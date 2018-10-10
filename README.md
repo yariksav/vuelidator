@@ -122,7 +122,7 @@ If you need own message options, just override `onValidationMessage` method
     ...
 ```
 
-## Properties wich will add by mixin:
+## Properties added by mixin:
 
  - `isValid`: checks is all data is valid. In first getter call validation will start in silent mode without provide errors
 
@@ -130,7 +130,7 @@ If you need own message options, just override `onValidationMessage` method
 
  - `successes`: object with successed flags by filed name
 
-## Methods of mixin
+## Methods added by mixin
 
 - Start validation with rules, provided in `validationRules` and data in vm.$data
 ```js
