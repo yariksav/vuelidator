@@ -1,8 +1,9 @@
 {
   "name": "vuelidator",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Vue validator",
   "scripts": {
+     "build:copy": "npm run build && bash build/copy.sh",
     "build": "npm run build:module && npm run build:browser",
     "build:module": "bili --name vuelidator --format cjs,es --js buble",
     "build:browser": "bili --name vuelidator --format umd,umd-min --js buble",

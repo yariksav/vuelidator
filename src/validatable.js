@@ -63,6 +63,9 @@ export default {
           let wather = this.$watch(field, (newVal, oldVal) => {
             validator.validateField(field, newVal)
           })
+          // {
+          //   deep: true //  TODO review
+          // })
           validator.watchers.push(wather)
         })
       }

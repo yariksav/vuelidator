@@ -44,7 +44,7 @@ To config your data rules fill validationRules in component computed propetry
     validationRules () {
       return {
         slug: 'required|alpha|min:5|max:16',
-        name: 'required|length:5,16',
+        name: 'required|lengthrange:5,16',
         permissions: [
           {
             name: 'required',
@@ -89,16 +89,17 @@ Validator                   | Description
 **ip**                      | check if the string is an IP (version 4 or 6).
 **iprange**                 | check if the string is an IP Range(version 4 only).
 **in**                      | check if the string is in a array of allowed values.
-**int**                     | check if the string is an integer
+**integer**                     | check if the string is an integer
 **json**                    | check if the string is valid JSON (note: uses JSON.parse).
 **jwt**                     | check if the string is valid JWT token.
 **latlong**                 | check if the string is a valid latitude-longitude coordinate in the format `lat,long` or `lat, long`.
-**length**                  | check if the string's length falls in a range
+**length**                  | check if the string's or array length equals value
+**lengthrange**          | check if the string's length falls in a range
 **lowercase**               | check if the string is lowercase.
 **macaddress**              | check if the string is a MAC address
 **md5**                     | check if the string is a MD5 hash.
 **phone**                   | check if the string is a mobile phone number. Locale
-**numeric**                 | check if the string contains only numbers
+**number**                 | check if the string contains only numbers
 **port**                    | check if the string is a valid port number.
 **postalcode**              | check if the string is a postal code,<br/><br/>(locale is one of `[ 'AD', 'AT', 'AU', 'BE', 'BG', 'CA', 'CH', 'CZ', 'DE', 'DK', 'DZ', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IL', 'IN', 'IS', 'IT', 'JP', 'KE', 'LI', 'LT', 'LU', 'LV', 'MX', 'NL', 'NO', 'PL', 'PT', 'RO', 'RU', 'SA', 'SE', 'SI', 'TN', 'TW', 'US', 'ZA', 'ZM' ]` OR 'any'. If 'any' is used, function will check if any of the locals match.
 **url**                     | check if the string is an URL

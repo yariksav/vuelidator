@@ -87,6 +87,10 @@ export class ValidatorItem {
     }
     for (let rule of this.rules) {
       const validatorFn = rule.handle || validators[rule.name]
+      if (!validatorFn) {
+        console.warn('no validator', rule)
+        continue
+      }
       if (!validatorFn(value, rule.args)) {
         return rule
       }
