@@ -1,9 +1,9 @@
 {
   "name": "vuelidator",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Vue validator",
   "scripts": {
-     "build:copy": "npm run build && bash build/copy.sh",
+    "build:copy": "npm run build && bash build/copy.sh",
     "build": "npm run build:module && npm run build:browser",
     "build:module": "bili --name vuelidator --format cjs,es --js buble",
     "build:browser": "bili --name vuelidator --format umd,umd-min --js buble",
@@ -32,11 +32,11 @@
   "homepage": "https://github.com/yariksav/vuelidator#readme",
   "dependencies": {
     "haye": "^2.0.2",
-    "validator": "^10.8.0"
+    "validator": "^13.1.1"
   },
   "devDependencies": {
     "bili": "^3.1.2",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.19"
   },
   "peerDependencies": {
     "lodash": "*"

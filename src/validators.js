@@ -38,20 +38,19 @@ const validators = {
     return validator.isLength(value, { min: undefined, max: args[0] })
   },
   minval: (value, args) => {
-    return validator.isFloat(value, { min: args[0], max: undefined })
+    return validator.isFloat('' + value, { min: args[0], max: undefined })
   },
   maxval: (value, args) => {
-    return validator.isFloat(value, { min: undefined, max: args[0] })
+    return validator.isFloat('' + value, { min: undefined, max: args[0] })
   },
   number: (value, args) => {
-    return validator.isFloat(value)
+    return validator.isFloat('' + value)
   },
   required: isExists,
   phone: (value, args) => {
     return validator.isMobilePhone(value, args[0])
   },
   regex: (value, args) => {
-    console.log(args[0], args[1])
     const regexp = new RegExp(args[0], args[1])
     return regexp.test(value)
   }
